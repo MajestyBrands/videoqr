@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  background: black;
+  overflow: hidden;
+}
+video {
+  width: auto;
+  height: 100vh;
+  max-width: 100vw;
+  display: block;
+  margin: auto;
+}
+.tap {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  opacity: 0.6;
+}
+</style>
+</head>
+<body>
+
+<video id="vid" autoplay muted playsinline loop>
+  <source src="XX BOW45570.mp4" type="video/mp4">
+</video>
+
+<div class="tap">Tap for sound</div>
+
+<script>
+const v = document.getElementById('vid');
+
+document.body.addEventListener('click', () => {
+  v.muted = false;
+  v.play();
+});
+</script>
+
+</body>
+</html>
